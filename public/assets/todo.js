@@ -3,8 +3,8 @@
 $(document).ready(function(){
     $('form').on('submit', function(){
   
-        var input = $('form input');
-        var todo = {task: item.val()};
+        var inputTask = $('form input');
+        var todo = {task: inputTask.val()};
 
         //The AJAX request for handling the submit of tasks
         $.ajax({
@@ -15,7 +15,7 @@ $(document).ready(function(){
         });
         
         //clear input after task is cleared
-        input.val('');
+        inputTask.val('');
         return false;
     });
 
